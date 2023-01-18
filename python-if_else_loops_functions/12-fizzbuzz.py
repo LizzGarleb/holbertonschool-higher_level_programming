@@ -10,4 +10,4 @@ def fizzbuzz():
         elif fizzbuzz % 5 == 0:
             print("Buzz ", end="")
             continue
-        print(fizzbuzz + ' ', end="")
+        print(str(fizzbuzz) + ' ', end="")
