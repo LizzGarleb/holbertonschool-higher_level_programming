@@ -5,4 +5,7 @@ for number in range (0, 10):
             continue
         if number > i:
             continue
-        print('{}{}'.format(number, i), end="")
+        if number == 8 and i == 9:
+            print('{}{}'.format(number, i))
+            break
+        print('{}{}, '.format(number, i), end="")
