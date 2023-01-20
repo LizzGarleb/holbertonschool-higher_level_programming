@@ -27,5 +27,5 @@ if __name__ == "__main__":
         result = a / b
         print("{} {} {} = {}".format(a, input_ope, b, int(result)))
     else:
-        print("Unkown operator. Available operators: +, -, * and /")
+        print("Unknown operator. Available operators: +, -, * and /")
         exit(1)
