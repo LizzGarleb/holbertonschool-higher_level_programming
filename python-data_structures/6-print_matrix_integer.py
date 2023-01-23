@@ -5,4 +5,4 @@ def print_matrix_integer(matrix=[[]]):
             if j == len(matrix[i]) - 1: #mark the ending of the matrix
                 print("{:d}".format(matrix[i][j]))
             else: #print next to it
-                print("{:d}".format(matrix[i][j]), end="")
+                print("{:d} ".format(matrix[i][j]), end="")
