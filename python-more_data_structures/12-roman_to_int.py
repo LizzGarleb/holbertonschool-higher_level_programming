@@ -4,6 +4,11 @@ def roman_to_int(roman_string):
         return 0
     rom_num = {"I": 1, "V": 5, "X": 10, "L": 50, "C": 100, "D": 500, "M": 1000}
     output = 0
-    for letters in roman_string:
-        output += rom_num[letters]
+    for letters in range(len(roman_string)):
+        now = rom_num[roman_string[letters]]
+        if letters != 0:
+            prev = rom_num[roman_string[letters - 1]] # taking the one before us shawty
+            if now > prev:
+                output = output - prev -prev
+        output += now
     return(output)
