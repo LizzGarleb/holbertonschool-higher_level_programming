@@ -7,8 +7,8 @@ def roman_to_int(roman_string):
     for letters in range(len(roman_string)):
         now = rom_num[roman_string[letters]]
         if letters != 0:
-            prev = rom_num[roman_string[letters - 1]] # taking the one before us shawty
+            prev = rom_num[roman_string[letters - 1]]
             if now > prev:
-                output = output - prev -prev
+                output = output - prev - prev
         output += now
     return(output)
