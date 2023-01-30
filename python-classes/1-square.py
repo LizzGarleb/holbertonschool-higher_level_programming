@@ -5,4 +5,4 @@
 class Square:
     """Definition of square attribute"""
     def __init__(self, size):
-        self.__Square__size = size
+        self._Square__size = size
