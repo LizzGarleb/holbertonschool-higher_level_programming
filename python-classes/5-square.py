@@ -35,7 +35,8 @@ class Square:
         """this print the quare shape"""
         if self == 0:
             print()
-        for height in range(self.size):
-            for width in range(self.size):
-                print("#", end="")
-            print()
+        else:
+            for height in range(self.size):
+                for width in range(self.size):
+                    print("#", end="")
+                print()
