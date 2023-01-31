@@ -33,7 +33,7 @@ class Square:
 
     def my_print(self):
         """this print the quare shape"""
-        if self == 0:
+        if self.__size == 0:
             print()
         else:
             for height in range(self.__size):
