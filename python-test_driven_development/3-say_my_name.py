@@ -5,6 +5,7 @@ the prints the sentece
 (My name is [first_name] [last_name])
 """
 
+
 def say_my_name(first_name, last_name=""):
     """
         Function that check that first_name is a str,
