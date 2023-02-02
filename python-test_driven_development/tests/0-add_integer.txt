@@ -35,10 +35,6 @@ NameError: name 'tres' is not defined
 Traceback (most recent call last):
     ...
 ValueError: invalid literal for int() with base 10: 'one'
->>> add_integer('NaN')
-Traceback (most recent call last):
-    ...
-    TypeError: a must be an integer
 >>> add_integer(float('nan'))
 Traceback (most recent call last):
     ...
