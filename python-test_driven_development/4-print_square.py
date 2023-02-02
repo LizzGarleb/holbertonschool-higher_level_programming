@@ -5,6 +5,8 @@ that print a square based on the
 variable size. Using # to shape
 draw the shape.
 """
+
+
 def print_square(size):
     """
         Function that print a square with '#'
