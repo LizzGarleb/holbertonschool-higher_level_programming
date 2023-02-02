@@ -27,3 +27,11 @@ OverflowError: cannot convert float infinity to integer
 Traceback (most recent call last):
     ...
 TypeError: a must be an integer
+>>> add_integer(tres, 6)
+Traceback (most recent call last):
+    ...
+NameError: name 'tres' is not defined
+>>> add_integer(int("one"), 7)
+Traceback (most recent call last):
+    ...
+ValueError: invalid literal for int() with base 10: 'one'
