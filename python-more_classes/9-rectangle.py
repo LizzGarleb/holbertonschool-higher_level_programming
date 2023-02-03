@@ -24,7 +24,7 @@ class Rectangle:
         elif height < 0:
             raise TypeError('height must be an integer')
         else:
-            self.__width = width
+            self.__height = height
         Rectangle.number_of_instances += 1
 
     @property
@@ -59,8 +59,7 @@ class Rectangle:
 
     def area(self):
         """ Return the area of the rectangle """
-        result_area = self.__width * self.__height
-        return result_area
+        return self.__width * self.__height
 
     def perimeter(self):
         """ Return the perimeter of the rectangle """
