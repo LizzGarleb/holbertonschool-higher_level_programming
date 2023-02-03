@@ -9,8 +9,8 @@ class Rectangle:
     """ Definition of rectangle attribute """
 
     def __init__(self, width=0, height=0):
-        self._height = height
-        self._width = width
+        self.__height = height
+        self.__width = width
 
     @property
     def width(self):
