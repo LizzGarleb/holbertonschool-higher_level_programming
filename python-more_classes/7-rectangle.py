@@ -78,7 +78,7 @@ class Rectangle:
             return ""
         rec_print = ""
         for i in range(self.__height):
-            rec_print += str(self.print_symbol) * self.__width
+            rec_print += "#" * self.__width
             if i != self.__height - 1:
                 rec_print += "\n"
         return rec_print
