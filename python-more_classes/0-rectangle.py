@@ -6,5 +6,7 @@ that define an empty square
 
 
 class Square:
-    """An empty class that define a sqr"""
+    """
+        An empty class that define a sqr
+    """
     pass
