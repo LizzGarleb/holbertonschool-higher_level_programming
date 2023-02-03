@@ -5,7 +5,7 @@ that define an empty square
 """
 
 
-class Square:
+class Rectangle:
     """
         An empty class that define a sqr
     """
