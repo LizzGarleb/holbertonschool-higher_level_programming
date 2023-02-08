@@ -28,11 +28,6 @@ TypeError: integer_validator() missing 2 required positional arguments: 'name' a
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 TypeError: integer_validator() missing 1 required positional argument: 'value'
->>> integer_validator("age", 4r)
-  File "<stdin>", line 1
-    integer_validator("age", 4r)
-                              ^
-SyntaxError: invalid syntax
 >>> bg.integer_validator("age", None)
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
