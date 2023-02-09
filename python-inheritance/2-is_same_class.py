@@ -12,7 +12,12 @@ def is_same_class(obj, a_class):
     is exactly an instance of the specifies class;
     otherwise False
     """
-    if isinstance(obj, a_class) == True:
+    if type(a_class) == bool:
+        return False
+    if a_class is None:
+        return False
+
+    if isinstance(obj, a_class):
         return True
     else:
         return False
