@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-This module have a empty class named Geometry
+This module have a class called BaseGeomtry, that
+contains two function (area, integer_validator)
 """
 
 
