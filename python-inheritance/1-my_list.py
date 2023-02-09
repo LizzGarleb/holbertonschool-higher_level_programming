@@ -6,6 +6,11 @@ named MyList that inherit from list.
 
 
 class MyList(list):
+    """
+    This class inherts from list,
+    it containd also a function that print
+    a sorted list
+    """
     def print_sorted(self):
         """
         This function prints a list sorted
