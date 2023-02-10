@@ -13,8 +13,6 @@ def write_file(filename="", text=""):
     written
     """
     with open(filename, 'r+') as fd:
-        for ch in range(len(text)):
-            fd.write(text[ch])
+        fd.write(text)
         fd.close
-        return ch
-
+        return len(text)
