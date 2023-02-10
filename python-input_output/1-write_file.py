@@ -13,6 +13,4 @@ def write_file(filename="", text=""):
     written
     """
     with open(filename, 'r+') as fd:
-        fd.write(text)
-        fd.close
-        return len(text)
+        return fd.write(text)
