@@ -18,12 +18,12 @@ class Student:
         if attrs is not None:
             new_dict = {}
             for i in attrs:
-                if str(i) == "first_name":
+                if i == "first_name":
                     new_dict[i] = self.first_name
                 elif i == "last_name":
-                    new_dict == self.last_name
-                elif i == "age":
+                    new_dict[i] == self.last_name
+                elif i == 'age':
                     new_dict[i] == self.age
-                return new_dict
-            else:
-                return self.__dict__
+            return new_dict
+        else:
+            return self.__dict__
