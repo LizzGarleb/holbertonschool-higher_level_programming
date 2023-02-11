@@ -1,5 +1,19 @@
 #!/usr/bin/python3
+"""
+This module contains a function that divide a mtrix
+named matrix_divided that you pass 2 arguments
+the matrix and the number to divide for
+"""
+
+
 def matrix_divided(matrix, div):
+    """
+    This function divide a matrix by the
+    number number passed to us
+
+    matrix = matrix to be divided
+    div = number to be divided from
+    """
     msg_error = "matrix must be a matrix (list of lists) of integers/floats"
     if type(matrix) is not list:
         raise TypeError(msg_error)
