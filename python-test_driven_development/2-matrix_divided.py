@@ -9,7 +9,9 @@ def matrix_divided(matrix, div):
     if div == 0:
         raise ZeroDivisionError('division by zero')
 
-    new_matrix = []
-    for i in matrix:
-        new_matrix.append(round(i / div, 2))
-    return(new_matrix)
+    first_row = len(matrix[0])
+    for row in matrix:
+        if first_row != len(row):
+            raise TypeError('Each row of the matrix must have the same size')
+
+    return [[round(i / div, 2) for i in row] for row in matrix]
