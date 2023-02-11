@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 def matrix_divided(matrix, div):
+    msg_error = "matrix must be a matrix (list of lists) of integers/floats"
     if type(matrix) is not list:
-        raise TypeError('matrix must be a matrix (list of lists) of integers/floats')
+        raise TypeError(msg_error)
 
     if type(div) not in [int, float]:
         raise TypeError('div must be a number')
