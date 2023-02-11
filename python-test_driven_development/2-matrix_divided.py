@@ -10,6 +10,11 @@ def matrix_divided(matrix, div):
     if div == 0:
         raise ZeroDivisionError('division by zero')
 
+    for row in matrix:
+        for value in row:
+            if type(value) not in [int, float]:
+                raise TypeError(msg_error)
+
     first_row = len(matrix[0])
     for row in matrix:
         if first_row != len(row):
