@@ -27,6 +27,7 @@ class Student:
             return new_dict
         else:
             return self.__dict__
+
     def reload_from_json(self, json):
         """
         Method that replaces all attributes of the
