@@ -6,6 +6,8 @@
     each of these characters:
     ". ? :"
 """
+
+
 def text_indentation(text):
     """
     Function that prints a text
