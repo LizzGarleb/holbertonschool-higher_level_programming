@@ -1,9 +1,12 @@
 #!/usr/bin/python3
-from models.base import Base
 """
 This module have a class that defines
 a rectangle, and it inherit from Base
 """
+
+
+from models.base import Base
+
 
 class Rectangle(Base):
     """
@@ -40,4 +43,3 @@ class Rectangle(Base):
     def width(self, width):
         """ Sets the width of the rectangle """
         self.__width = width
-
