@@ -43,3 +43,20 @@ class Rectangle(Base):
     def width(self, width):
         """ Sets the width of the rectangle """
         self.__width = width
+
+    @property
+    def x(self):
+        return self.__x
+
+    @x.setter
+    def x(self, x):
+        self.__x = x
+
+    @property
+    def y(self):
+        return self.__y
+
+    @y.setter
+    def y(self, y):
+        self.__y = y
+
