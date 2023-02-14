@@ -127,6 +127,7 @@ class Rectangle(Base):
                 f'{self.__width}/{self.__height}')
 
     def update(self, *args):
+        """ Assigns an arguments to each attribute """
         count = 0
         for arg in args:
             if count == 0:
