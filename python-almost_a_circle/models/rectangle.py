@@ -126,5 +126,5 @@ class Rectangle(Base):
         """
         Returns [Rectangle] (id) x/y - width-height
         """
-        return (f'[Rectangle] ({self.id}) {self.x}/{self.y} - '
-                f'{self.width}-{self.height}')
+        return (f'[Rectangle] ({self.id}) {self.__x}/{self.__y} - '
+                f'{self.__width}-{self.__height}')
