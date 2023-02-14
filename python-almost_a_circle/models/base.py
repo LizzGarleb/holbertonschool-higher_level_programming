@@ -7,6 +7,9 @@ duplicating the same code
 """
 
 
+import json
+
+
 class Base:
     """ This class will be the base of all other
     classes in this projects. """
@@ -22,3 +25,13 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
+
+    @staticmethod
+    def to_json_string(list_dictionaries):
+        """
+        This function returns a JSON string representation of
+        the dictionary passed to us
+        """
+        if list_dictionaries is not {} and list_dictionaries is not None:
+            return json.dumps(list_dictionaries)
+        return []
