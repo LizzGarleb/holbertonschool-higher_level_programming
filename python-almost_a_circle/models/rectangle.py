@@ -137,22 +137,26 @@ class Rectangle(Base):
                 if count == 0:
                     self.id = arg
                 if count == 1:
-                    self.width = arg
+                    self.__width = arg
                 if count == 2:
-                    self.x = arg
+                    self.__height = arg
                 if count == 3:
-                    self.y = arg
+                    self.__x = arg
+                if count == 4:
+                    self.__y = arg
                 count += 1
 
         for key, elem in kwargs.items():
             if key == "id":
                 self.id = elem
-            if key == "size":
-                self.width = elem
+            if key == "width":
+                self.__width = elem
             if key == "x":
-                self.x = elem
+                self.__x = elem
             if key == "y":
-                self.y = elem
+                self.__y = elem
+            if key == "height":
+                self.__height = elem
 
 
     def to_dictionary(self):
