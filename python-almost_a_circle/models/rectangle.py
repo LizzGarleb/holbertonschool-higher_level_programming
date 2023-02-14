@@ -158,10 +158,16 @@ class Rectangle(Base):
             if key == "height":
                 self.__height = elem
 
-
     def to_dictionary(self):
         """
         Return a dictionary representation
         of the class Rectangle
         """
-        return {'x': self.__x, 'y': self.__y, 'id': self.id, 'height': self.__height, 'width': self.__width}
+        dic_rep = {
+            'x': self.__x,
+            'y': self.__y,
+            'id': self.id,
+            'height': self.__height,
+            'width': self.__width
+            }
+        return dic_rep
