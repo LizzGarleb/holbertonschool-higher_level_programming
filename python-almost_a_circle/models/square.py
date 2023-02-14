@@ -47,13 +47,13 @@ class Square(Rectangle):
             for arg in args:
                 if count == 0:
                     self.id = arg
-                elif count == 1:
+                if count == 1:
                     self.width = arg
-                elif count == 2:
+                if count == 2:
                     self.height = arg
-                elif count == 3:
+                if count == 3:
                     self.x = arg
-                elif count == 4:
+                if count == 4:
                     self.y = arg
                 count += 1
 
