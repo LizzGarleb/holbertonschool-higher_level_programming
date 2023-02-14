@@ -121,3 +121,9 @@ class Rectangle(Base):
             if i != self.__height - 1:
                 rec_print += "\n"
         print(rec_print)
+
+    def __str__(self):
+        """
+        Returns [Rectangle] (id) x/y - width-height
+        """
+        return '[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}-{self.height}'.format(self=self)
