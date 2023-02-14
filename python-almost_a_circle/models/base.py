@@ -32,6 +32,8 @@ class Base:
         This function returns a JSON string representation of
         the dictionary passed to us
         """
-        if list_dictionaries is not {} and list_dictionaries is not None:
-            return json.dumps(list_dictionaries)
-        return list()
+        if list_dictionaries is not []:
+            return list()
+        if list_dictionaries is not None:
+            return list()
+        return json.dumps(list_dictionaries)
