@@ -26,14 +26,22 @@ class Square(Rectangle):
 
     @property
     def size(self):
+        """
+        Return the size of the sqr using
+        the width of the upper class
+        """
         return super().width
 
     @size.setter
     def size(self, size):
+        """ Sets the sqr size """
         self.width = size
 
     def update(self, *args, **kwargs):
-
+        """
+        Assigns the attribute, if args is empty
+        then it used the kwards to assign
+        """
         if args is not None:
             count = 0
             for arg in args:
