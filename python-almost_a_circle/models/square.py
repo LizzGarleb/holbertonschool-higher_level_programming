@@ -70,9 +70,9 @@ class Square(Rectangle):
         Dictionaty representation of the class
         """
         dic_sqr = {
-            'id' : self.id,
+            'id': self.id,
             'size': self.width,
-            'x' : self.x,
-            'y' : self.y
+            'x': self.x,
+            'y': self.y
         }
         return dic_sqr
