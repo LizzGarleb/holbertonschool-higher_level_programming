@@ -32,6 +32,7 @@ class Base:
         This function returns a JSON string representation of
         the dictionary passed to us
         """
-        if list_dictionaries is {} or list_dictionaries is None:
+        if list_dictionaries is None:
             return list()
-        return json.dumps(list_dictionaries)
+        else:
+            return json.dumps(list_dictionaries)
