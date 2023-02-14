@@ -73,10 +73,12 @@ class Rectangle(Base):
 
     @property
     def x(self):
+        """ Return the x of the rectangle """
         return self.__x
 
     @x.setter
     def x(self, x):
+
         if type(x) is not int:
             raise TypeError('x must be an integer')
         elif x < 0:
@@ -86,13 +88,22 @@ class Rectangle(Base):
 
     @property
     def y(self):
+        """ Return the y of the rectangle """
         return self.__y
 
     @y.setter
     def y(self, y):
+        """ Sets the y of the rectangle """
         if type(y) is not int:
             raise TypeError('y must be an integer')
         elif y < 0:
             raise ValueError('y must be >= 0')
         else:
             self.__y = y
+
+    def area(self):
+        """
+        Public Method that return the area value
+        of Rectangle instance
+        """
+        return self.__height * self.__width
