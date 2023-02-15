@@ -95,4 +95,7 @@ class TestRectangle(unittest.TestCase):
     """ Testing update method """
 
     """  Testing to_dictionary method """
-
+    def test_to_dictionary(self):
+        rec = Rectangle(10, 2, 1, 9)
+        result = {'x': 1, 'y': 9, 'id': 8, 'height': 2, 'width': 10}
+        self.assertDictEqual(rec.to_dictionary(), result)
