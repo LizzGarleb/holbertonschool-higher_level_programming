@@ -84,3 +84,15 @@ class TestRectangle(unittest.TestCase):
     def test_area_3(self):
         rec = Rectangle(8, 7, 0, 0, 12)
         self.assertEqual(rec.area(), 56)
+
+    """ Testing display """
+
+    """ Testing __str__ """
+    def test_str_method(self):
+        rec = Rectangle(4, 6, 2, 1, 12)
+        self.assertEqual(rec.__str__(), "[Rectangle] (12) 2/1 - 4/6")
+
+    """ Testing update method """
+
+    """  Testing to_dictionary method """
+
