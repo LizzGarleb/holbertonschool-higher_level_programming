@@ -1,6 +1,7 @@
 import unittest
-import io
+from io import StringIO
 import unittest.mock
+from unittest.mock import patch
 
 from models.rectangle import Rectangle
 
@@ -88,6 +89,10 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(rec.area(), 56)
 
     """ Testing display """
+    def test_display(self):
+        with patch('sys.stdout', new=StringIO()) as fakeOutput:
+            print('##\n ##\n')
+            self.assertEqual(fakeOutput.getvalue().strip(), '##\n ##')
 
     """ Testing __str__ """
     def test_str_method(self):
