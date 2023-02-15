@@ -7,6 +7,7 @@ duplicating the same code
 """
 
 
+from os import path
 import json
 
 
@@ -75,3 +76,15 @@ class Base:
             dummy = cls(5, 5)
         cls.update(dummy, **dictionary)
         return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        filename = cls.__name__ + '.json'
+        if path.exists(filename) is False:
+            return []
+        with open(filename, 'r') as fd:
+            attrs_dic = cls.from_json_string(fd.read())
+            li = []
+            for i in attrs_dic:
+                li.append(cls.create(**i))
+            return li
