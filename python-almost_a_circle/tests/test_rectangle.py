@@ -1,4 +1,6 @@
 import unittest
+import io
+import unittest.mock
 
 from models.rectangle import Rectangle
 
@@ -93,6 +95,18 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(rec.__str__(), "[Rectangle] (12) 2/1 - 4/6")
 
     """ Testing update method """
+    def test_update(self):
+        rec = Rectangle(10, 10, 10, 10, 10)
+        rec.update(89)
+        self.assertEqual(rec.id, 89)
+        rec.update(89, 2)
+        self.assertEqual(rec.width, 2)
+        rec.update(89, 2, 3)
+        self.assertEqual(rec.height, 3)
+        rec.update(89, 2, 3, 4)
+        self.assertEqual(rec.x, 4)
+        rec.update(89, 2, 3, 4, 5)
+        self.assertEqual(rec.y, 5)
 
     """  Testing to_dictionary method """
     def test_to_dictionary(self):
