@@ -54,3 +54,21 @@ class TestSquare(unittest.TestCase):
         sqr = Square(10, 2, 1, 6)
         result = {'id': 6, 'x': 2, 'size': 10, 'y': 1}
         self.assertDictEqual(sqr.to_dictionary(), result)
+
+    """ Testing update method """
+    def test_update(self):
+        sqr = Square(5)
+        sqr.update(10)
+        self.assertEqual(sqr.id, 10)
+        sqr.update(1, 2)
+        self.assertEqual(sqr.id, 1)
+        self.assertEqual(sqr.width, 2)
+        sqr.update(1, 2, 3)
+        self.assertEqual(sqr.x, 3)
+        sqr.update(1, 2, 3, 4)
+        self.assertEqual(sqr.y, 4)
+        sqr.update(x=12)
+        self.assertEqual(sqr.x, 12)
+        sqr.update(size=7, y=1)
+        self.assertEqual(sqr.size, 7)
+        self.assertEqual(sqr.y, 1)
