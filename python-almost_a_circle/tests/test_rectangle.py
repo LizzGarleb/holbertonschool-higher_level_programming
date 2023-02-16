@@ -90,14 +90,14 @@ class TestRectangle(unittest.TestCase):
     """ Testing display """
     @unittest.mock.patch('sys.stdout', new_callable=io.StringIO)
     def assert_stdout(self, expected_output, w, h, x, y, mock_stdout):
-        rec = Rectangle(w, h, x, y)
+        rec = Rectangle(w, h)
         rec.display()
         self.assertEqual(mock_stdout.getvalue(), expected_output)
 
     def test_display(self):
-        self.assert_stdout("\n ##\n ##\n", 2, 2, 1, 1)
-        self.assert_stdout("\n\n  ##\n  ##\n  ##\n", 2, 3, 2, 2)
-        self.assert_stdout(" ###\n ###\n", 3, 2, 1, 0)
+        self.assert_stdout("##\n##\n", 2, 2, 1, 1)
+        self.assert_stdout("##\n##\n##\n", 2, 3, 2, 2)
+        self.assert_stdout("###\n###\n", 3, 2, 1, 0)
 
     """ Testing __str__ """
     def test_str_method(self):
