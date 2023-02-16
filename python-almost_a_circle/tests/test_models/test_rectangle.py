@@ -144,7 +144,7 @@ class TestRectangle(unittest.TestCase):
 
     def test_save_to_file(self):
         Rectangle.save_to_file([Rectangle(1, 2)])
-        result = '[{"x": 0, "y": 0, "id": 11, "height": 2, "width": 1}]'
+        result = '[{"x": 0, "y": 0, "id": 13, "height": 2, "width": 1}]'
         with open("Rectangle.json") as fd:
             self.assertEqual(result, fd.read())
 
