@@ -123,3 +123,6 @@ class TestRectangle(unittest.TestCase):
         rec = Rectangle(10, 2, 1, 9, 7)
         result = {'x': 1, 'y': 9, 'id': 7, 'height': 2, 'width': 10}
         self.assertDictEqual(rec.to_dictionary(), result)
+
+if __name__ == '__main__':
+    unittest.main()
