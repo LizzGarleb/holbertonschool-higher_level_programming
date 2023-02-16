@@ -124,5 +124,29 @@ class TestRectangle(unittest.TestCase):
         result = {'x': 1, 'y': 9, 'id': 7, 'height': 2, 'width': 10}
         self.assertDictEqual(rec.to_dictionary(), result)
 
+    """ Testing create method """
+    def test_create(self):
+        r1 = Rectangle(3, 5, 1)
+        r1_dic = r1.to_dictionary()
+        r2 = Rectangle.create(**r1_dic)
+        self.assertNotEqual(r1, r2)
+
+    """ Testing save to file """
+    def test_save_to_file_empty(self):
+        Rectangle.save_to_file(None)
+        with open("Rectangle.json") as fd:
+            self.assertEqual('[]', fd.read())
+
+    def test_save_to_file_empty_2(self):
+        Rectangle.save_to_file([])
+        with open("Rectangle.json") as fd:
+            self.assertEqual('[]', fd.read())
+
+    def test_save_to_file(self):
+        Rectangle.save_to_file([Rectangle(1, 2)])
+        result = '[{"x": 0, "y": 0, "id": 11, "height": 2, "width": 1}]'
+        with open("Rectangle.json") as fd:
+            self.assertEqual(result, fd.read())
+
 if __name__ == '__main__':
     unittest.main()
