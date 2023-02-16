@@ -138,8 +138,7 @@ class TestRectangle(unittest.TestCase):
             self.assertEqual('[]', fd.read())
 
     def test_save_to_file_empty_2(self):
-        li = []
-        Rectangle.save_to_file(li)
+        Rectangle.save_to_file([])
         with open("Rectangle.json") as fd:
             self.assertEqual('[]', fd.read())
 
