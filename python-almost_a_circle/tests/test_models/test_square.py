@@ -4,10 +4,15 @@ import unittest
 
 class TestSquare(unittest.TestCase):
 
+    """ Checker preference """
+    def test_checker(self):
+        with self.assertRaises(ValueError):
+            sqr = Square(0)
+
     """ Testing id """
     def test_id(self):
         sqr = Square(1)
-        self.assertAlmostEqual(sqr.id, 27)
+        self.assertAlmostEqual(sqr.id, 30)
 
     """ Testing size """
     def test_size(self):
@@ -48,7 +53,7 @@ class TestSquare(unittest.TestCase):
     """ Testing __str__ method """
     def test_str_method(self):
         sqr = Square(5)
-        self.assertAlmostEqual(sqr.__str__(), "[Square] (35) 0/0 - 5")
+        self.assertEqual(sqr.__str__(), "[Square] (39) 0/0 - 5")
 
     """ Testing to_dictionary method """
     def test_to_dic(self):
@@ -68,6 +73,31 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(sqr.x, 3)
         sqr.update(1, 2, 3, 4)
         self.assertEqual(sqr.y, 4)
+
+    """ Testing create method """
+    def test_create(self):
+        sqr1 = Square(2)
+        sqr1_dic = sqr1.to_dictionary()
+        sqr2 = Square.create(**sqr1_dic)
+        self.assertNotEqual(sqr1, sqr2)
+
+    """ Testing to save to file """
+    def test_save_to_file_empty(self):
+        Square.save_to_file(None)
+        with open("Square.json") as fd:
+            self.assertEqual('[]', fd.read())
+
+    def test_save_to_file_empty_2(self):
+        li = []
+        Square.save_to_file(li)
+        with open("Square.json") as fd:
+            self.assertEqual('[]', fd.read())
+
+    def test_save_to_file(self):
+        Square.save_to_file([Square(1)])
+        result = '[{"id": 34, "size": 1, "x": 0, "y": 0}]'
+        with open("Square.json") as fd:
+            self.assertEqual(result, fd.read())
 
 if __name__ == '__main__':
     unittest.main()
