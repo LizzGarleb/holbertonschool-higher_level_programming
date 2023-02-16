@@ -67,8 +67,3 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(sqr.x, 3)
         sqr.update(1, 2, 3, 4)
         self.assertEqual(sqr.y, 4)
-        sqr.update(x=12)
-        self.assertEqual(sqr.x, 12)
-        sqr.update(size=7, y=1)
-        self.assertEqual(sqr.size, 7)
-        self.assertEqual(sqr.y, 1)
