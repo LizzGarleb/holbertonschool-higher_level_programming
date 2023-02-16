@@ -1,6 +1,7 @@
 import unittest
 import io
 import unittest.mock
+import json
 
 from models.rectangle import Rectangle
 
@@ -141,6 +142,14 @@ class TestRectangle(unittest.TestCase):
         Rectangle.save_to_file([])
         with open("Rectangle.json") as fd:
             self.assertEqual('[]', fd.read())
+
+    def save_to_file(self):
+        list_obj = []
+        expected = []
+        Rectangle.save_to_file(list_obj)
+        with open("Rectangle.json") as fd:
+            json = json.load(fd)
+            self.assertEqual(expected, json)
 
     def test_save_to_file(self):
         Rectangle.save_to_file([Rectangle(1, 2)])
