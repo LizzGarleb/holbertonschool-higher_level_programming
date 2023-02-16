@@ -30,5 +30,31 @@ class TestBase(unittest.TestCase):
         json = Base.to_json_string(None)
         self.assertEqual(json, '[]')
 
+    """ Testing from json to string """
+    def test_json_srting(self):
+        json = Base.from_json_string(None)
+        self.assertEqual(json, [])
+
+    def test_json_str(self):
+        json = Base.from_json_string("[]")
+        self.assertEqual(json, [])
+
+    def test_json_str_good(self):
+        list_input = [
+            {'id': 89, 'width': 10, 'height': 4},
+            {'id': 7, 'width': 1, 'height': 7}
+        ]
+        json_li_input = Base.to_json_string(list_input)
+        json_output = Base.from_json_string(json_li_input)
+        self.assertIsInstance(json_output, list)
+
+    def test_json_str_empty(self):
+        json = Base.from_json_string(None)
+        self.assertEqual(json, [])
+
+    def test_json_str_empty_2(self):
+        json = Base.from_json_string("[]")
+        self.assertEqual(json, [])
+
 if __name__ == '__main__':
     unittest.main()
