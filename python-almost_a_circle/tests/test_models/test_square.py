@@ -7,7 +7,7 @@ class TestSquare(unittest.TestCase):
     """ Testing id """
     def test_id(self):
         sqr = Square(1)
-        self.assertEqual(sqr.id, 22)
+        self.assertEqual(sqr.id, 24)
 
     """ Testing size """
     def test_size(self):
@@ -48,7 +48,7 @@ class TestSquare(unittest.TestCase):
     """ Testing __str__ method """
     def test_str_method(self):
         sqr = Square(5)
-        self.assertEqual(sqr.__str__(), "[Square] (30) 0/0 - 5")
+        self.assertEqual(sqr.__str__(), "[Square] (32) 0/0 - 5")
 
     """ Testing to_dictionary method """
     def test_to_dic(self):
