@@ -12,7 +12,7 @@ class TestSquare(unittest.TestCase):
     """ Testing id """
     def test_id(self):
         sqr = Square(1)
-        self.assertAlmostEqual(sqr.id, 34)
+        self.assertAlmostEqual(sqr.id, 35)
 
     """ Testing size """
     def test_size(self):
@@ -53,7 +53,7 @@ class TestSquare(unittest.TestCase):
     """ Testing __str__ method """
     def test_str_method(self):
         sqr = Square(5)
-        self.assertEqual(sqr.__str__(), "[Square] (47) 0/0 - 5")
+        self.assertEqual(sqr.__str__(), "[Square] (48) 0/0 - 5")
 
     """ Testing to_dictionary method """
     def test_to_dic(self):
@@ -94,7 +94,7 @@ class TestSquare(unittest.TestCase):
 
     def test_save_to_file(self):
         Square.save_to_file([Square(1)])
-        result = '[{"id": 42, "size": 1, "x": 0, "y": 0}]'
+        result = '[{"id": 43, "size": 1, "x": 0, "y": 0}]'
         with open("Square.json") as fd:
             self.assertEqual(result, fd.read())
 

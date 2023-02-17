@@ -100,6 +100,10 @@ class TestRectangle(unittest.TestCase):
         self.assert_stdout("##\n##\n##\n", 2, 3, 2, 2)
         self.assert_stdout("###\n###\n", 3, 2, 1, 0)
 
+    @unittest.expectedFailure
+    def test_display_failure(self):
+        self.assert_stdout(ValueError, 0, 0, 0, 0)
+
     """ Testing __str__ """
     def test_str_method(self):
         rec = Rectangle(4, 6, 2, 1, 12)
@@ -152,7 +156,7 @@ class TestRectangle(unittest.TestCase):
 
     def test_save_to_file(self):
         Rectangle.save_to_file([Rectangle(1, 2)])
-        result = '[{"x": 0, "y": 0, "id": 17, "height": 2, "width": 1}]'
+        result = '[{"x": 0, "y": 0, "id": 18, "height": 2, "width": 1}]'
         with open("Rectangle.json") as fd:
             self.assertEqual(result, fd.read())
 
