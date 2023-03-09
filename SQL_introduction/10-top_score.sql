@@ -1,2 +1,2 @@
 -- Script that list all records of the table
-SELECT * from second_table
+SELECT * FROM second_table
