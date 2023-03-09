@@ -1,2 +1,2 @@
 -- Script that list all records of the table
-SELECT * FROM second_table limit 0, 10;
+SELECT * FROM second_table LIMIT 0, 10;
