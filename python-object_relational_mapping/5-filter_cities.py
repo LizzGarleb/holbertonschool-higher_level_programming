@@ -28,7 +28,7 @@ if __name__ == '__main__':
     rows = cur.fetchall()
     for row in rows:
         for col in row:
-            print("%s, " % col)
+            print("%s, ", end="" % col)
 
     # Clean Up
     cur.close()
