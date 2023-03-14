@@ -21,7 +21,7 @@ if __name__ == '__main__':
 
     # Executing MySql Query
     query = ("SELECT * FROM states WHERE name LIKE BINARY %s")
-    cur.excute(query, search)
+    cur.execute(query, search)
 
     # Obtaining Query Result & prints the result in rows
     rows = cur.fetchall()
