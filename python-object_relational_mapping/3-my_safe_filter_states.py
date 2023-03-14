@@ -20,7 +20,8 @@ if __name__ == '__main__':
     cur = db.cursor()
 
     # Executing MySql Query
-    cur.execute("SELECT * FROM states WHERE name = '{search}' ORDER BY id")
+    cur.execute("SELECT * FROM states WHERE name LIKE BINARY '{}'\
+                ORDER BY id".format(search))
 
     # Obtaining Query Result & prints the result in rows
     rows = cur.fetchall()
