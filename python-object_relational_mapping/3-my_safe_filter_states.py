@@ -19,9 +19,10 @@ if __name__ == '__main__':
     # Creating cursor object
     cur = db.cursor()
 
+    proc = ({search},)
     # Executing MySql Query
     query = "SELECT * FROM states WHERE name LIKE BINARY %s"
-    cur.execute(query, search)
+    cur.execute(query, proc)
 
     # Obtaining Query Result & prints the result in rows
     rows = cur.fetchall()
