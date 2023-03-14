@@ -26,8 +26,7 @@ if __name__ == '__main__':
     # Obtaining Query Result & prints the result in rows
     rows = cur.fetchall()
     for row in rows:
-        if row[1][0] == 'N':
-            print(row)
+        print(row)
 
     # Clean Up
     cur.close()
