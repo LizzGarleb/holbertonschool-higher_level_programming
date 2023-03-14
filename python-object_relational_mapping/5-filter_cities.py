@@ -27,7 +27,7 @@ if __name__ == '__main__':
     # Obtaining Query Result & prints the result in rows
     rows = cur.fetchall()
     for row in rows:
-            print(row, sep=", ", end="")
+            print("{}".format(row[1]))
 
     # Clean Up
     cur.close()
