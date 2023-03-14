@@ -26,8 +26,10 @@ if __name__ == '__main__':
 
     # Obtaining Query Result & prints the result in rows
     rows = cur.fetchall()
+    lis = []
     for row in rows:
-            print("{}".format(row[1]))
+        lis.append(row[0])
+    print(', '.join(lis))
 
     # Clean Up
     cur.close()
