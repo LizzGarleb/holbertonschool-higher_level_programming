@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+"""Lists all states object from the database"""
 from sys import argv
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
