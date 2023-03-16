@@ -23,10 +23,9 @@ if __name__ == "__main__":
     session = Session()
 
     result = session.query(State).order_by(State.id).first()
-    for states in result:
-        if result:
-            print(f"{states.id}: {states.name}")
-        else:
-            print("Nothing")
+    if result:
+        print(f"{states.id}: {states.name}")
+    else:
+        print("Nothing")
 
     session.close()
