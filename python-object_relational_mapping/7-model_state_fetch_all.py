@@ -23,6 +23,6 @@ if __name__ == "__main__":
     session = Session()
 
     for states in session.query(State).order_by(State.id):
-        print("{}: {}".format(states.id, states.name))
+        print(f"{state.id}: {state.name}")
 
     session.close()
