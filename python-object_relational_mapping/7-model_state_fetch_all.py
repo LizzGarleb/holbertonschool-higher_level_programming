@@ -2,6 +2,8 @@
 """
 Lists all states object from the database
 """
+
+
 from sys import argv
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
@@ -9,7 +11,6 @@ from model_state import Base, State
 
 
 if __name__ == '__main__':
-    """ List all states object from the database """
     url = "mysql+mysqlconnector://{user}:{password}@localhost:3306/{database}"
     engine = create_engine(url.format(
         user=argv[1]
