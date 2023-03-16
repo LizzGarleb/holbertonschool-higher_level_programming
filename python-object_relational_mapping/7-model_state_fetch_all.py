@@ -7,16 +7,16 @@ from model_state import Base, State
 
 
 if __name__ == '__main__':
-    username = argv[1]
-    psw = argv[2]
-    db_name = argv[3]
-
-    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(username, psw, db_name), pool_pre_ping=True)
+    engine = create_engine("mysql+mysqlconnector://{user}:{password}@localhost:3306/{database}".format(
+        user = argv[1]
+        password = argv[2]
+        database = argv[3]
+    ))
 
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    states = session.query(State).order_by(State.id).all()
+    states = session.query(State)order_by(states.id).all()
 
     for state in states:
-        print('{}: {}'.format(state.id, state.name))
+        print("{}: {}" states.id, states.name)
