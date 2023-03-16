@@ -24,7 +24,7 @@ if __name__ == "__main__":
     session = Session()
 
     states = session.query(State).order_by(State.id).filter(State.name == name).all()
-    if states:
+    if states is not None:
         print(states.id)
     else:
         print("Not found")
