@@ -8,7 +8,7 @@ from sqlalchemy.orm import sessionmaker
 from model_state import Base, State
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     """Lists all state object from the database"""
 
     user = sys.argv[1]
