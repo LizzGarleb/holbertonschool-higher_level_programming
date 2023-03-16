@@ -2,7 +2,7 @@
 """Lists all states object from the database"""
 
 
-from sys import argv
+import sys
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from model_state import Base, State
@@ -11,16 +11,18 @@ from model_state import Base, State
 if __name__ == '__main__':
     """Lists all state object from the database"""
 
-    user = argv[1]
-    password = argv[2]
-    database = argv[3]
+    user = sys.argv[1]
+    password = sys.argv[2]
+    database = sys.argv[3]
 
-    engine = create_engine(f"mysql+mysqlconnector://{user}:{password}@localhost:3306/{database}", pool_pre_ping=True)
+    engine = create_engine(
+        f"mysql+mysqlconnector://{user}:{password}@localhost:3306/{database}"
+    )
 
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    for states in session.query(State).order_by(State.id).all():
+    for states in session.query(State).order_by(State.id):
         print("{}: {}".format(states.id, states.name))
 
     session.close()
