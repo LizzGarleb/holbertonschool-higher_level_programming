@@ -23,7 +23,7 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    states = session.query(State).filter_by(name=name)
+    states = session.query(State).order_by(State.id).filter(State.name == name).all()
     if states:
         print(states.id)
     else:
