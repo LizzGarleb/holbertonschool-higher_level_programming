@@ -24,4 +24,4 @@ if __name__ == "__main__":
     session.add(State(name='Loisiana'))
     session.commit()
     state = session.query(State).distinct().count()
-    print(state)
+    print(f"{states.id}: {states.name}")
