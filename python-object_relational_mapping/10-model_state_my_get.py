@@ -23,7 +23,8 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    states = session.query(State).order_by(State.id).filter(State.name == name).all()
+    states = session.query(State).order_by(State.id).filter(State.name == name)
+
     if states is not None:
         print(states.id)
     else:
