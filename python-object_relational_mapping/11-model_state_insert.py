@@ -21,7 +21,7 @@ if __name__ == "__main__":
 
     Session = sessionmaker(bind=engine)
     session = Session()
-    session.add(State(name='Loisiana'))
+    session.add(State(name="Loisiana"))
     session.commit()
     states = session.query(State).distinct().count()
     print(states)
