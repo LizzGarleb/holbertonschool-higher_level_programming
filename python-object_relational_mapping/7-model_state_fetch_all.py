@@ -9,15 +9,15 @@ from model_state import Base, State
 
 
 if __name__ == '__main__':
-    """ Lists all state object from the database """
+    """Lists all state object from the database"""
 
     user = argv[1]
     password = argv[2]
     database = argv[3]
 
     engine = create_engine(
-        "mysql+mysqlconnector://{user}:{password}@localhost:3306/{database}"
-        )
+        f"mysql+mysqlconnector://{user}:{password}@localhost/{database}"
+    )
 
     Session = sessionmaker(bind=engine)
     session = Session()
@@ -25,6 +25,6 @@ if __name__ == '__main__':
     states = session.query(State).order_by(State.id).all()
 
     for state in states:
-        print("{}: {}" state.id, state.name)
+        print(f"{state.id}: {state.name}")
 
     session.close()
