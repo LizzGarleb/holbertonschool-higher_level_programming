@@ -21,7 +21,7 @@ if __name__ == "__main__":
 
     Session = sessionmaker(bind=engine)
     session = Session()
-    session.get(State, 2)
+    states = session.get(State, 2)
     states.name = "New Mexico"
     session.commit()
     session.close()
