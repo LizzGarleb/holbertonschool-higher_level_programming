@@ -1,4 +1,4 @@
-#!/opt/homebrew/bin/node
+#!/usr/bin/node
 const process = require('process');
 
 if (parseInt(process.argv[2])) {
