@@ -7,7 +7,7 @@ class Square extends Rectangle {
     }
     let rect = '';
     for (let i = 0; i < this.width; i++) {
-      rect += 'X';
+      rect += c;
     }
     for (let i = 0; i < this.height; i++) {
       console.log(rect);
