@@ -1,6 +1,6 @@
 <h4 align="center">
     <div class="HeaderSticker">
-        <img src="https://media.giphy.com/media/aEwLTJvYxwo1L09oyP/giphy.gif"/>
+        <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMzMzNTUxYWEyMzZkODBlOTk3N2RlODkwODBlOGE1ODIwZmY4NTM4OCZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/4KzpjLvJjJknJ5Xuak/giphy.gif"/>
     </div>
     <h1 align="center"> Python - Hello, World </h1>
 </h4>
