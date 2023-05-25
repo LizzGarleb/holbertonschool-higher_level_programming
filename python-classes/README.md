@@ -3,7 +3,7 @@
     <div class="HeaderSticker">
         <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZGViNmRmZDVlNGMxMTk1Yzc1MDM2YTUwZjAzMDkyMDMzM2JlMjRmYiZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/xT9IgzoKnwFNmISR8I/giphy.gif"/>
     </div>
-    <h1 align="center"> Python - if/else, loops, functions </h1>
+    <h1 align="center"> Python - classes </h1>
 </h4>
 
 ### Description
